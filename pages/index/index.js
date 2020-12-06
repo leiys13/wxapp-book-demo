@@ -62,5 +62,16 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  submitForm: function (e) {
+    wx.request({
+      method: 'post',
+      url: 'http://127.0.0.1:3000',
+      data: e.detail.value,
+      success: res => {
+        console.log('response: ', res)
+      }
+    })
   }
 })

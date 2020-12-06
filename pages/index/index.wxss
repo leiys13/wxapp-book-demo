@@ -1,1 +1,22 @@
 /* pages/index/index.wxss */
+.container {
+  margin: 50rpx;
+}
+view {
+  margin-bottom: 30rpx;
+}
+input {
+  width: 650rpx;
+  margin-top: 10rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+label {
+  display: block;
+  margin: 8rpx;
+}
+textarea {
+  width: 650rpx;
+  height: 100rpx;
+  margin-top: 10rpx;
+  border: 2rpx solid #eee;
+}
