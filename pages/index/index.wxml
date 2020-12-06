@@ -1,30 +1,30 @@
 <!--pages/index/index.wxml-->
 <view class="container">
-  <form bindsubmit="submitForm">
-    <view>
-      <text>姓名：</text>
-      <input name="name" value="张三"></input>
-    </view>
-    <view>
-      <text>性别：</text>
-      <radio-group name="gender">
-        <label><radio value="1" checked />男</label>
-        <label><radio value="2" />女</label>
-      </radio-group>
-    </view>
-    <view>
-      <text>专业技能：</text>
-      <checkbox-group name="skills">
-        <label><checkbox value="html" checked />HTML</label>
-        <label><checkbox value="css" checked />CSS</label>
-        <label><checkbox value="js" />JavaScript</label>
-        <label><checkbox value="ps" />Photoshop</label>
-      </checkbox-group>
-    </view>
-    <view>
-      <text>您的意见：</text>
-      <textarea name="opinion" value="测试" />
-    </view>
+	<form bindsubmit="submitForm">
+		<view>
+			<text>姓名：</text>
+			<input name="name" value="{{ name }}"></input>
+		</view>
+		<view>
+			<text>性别：</text>
+			<radio-group name="gender">
+				<label wx:for="{{gender}}" wx:key="value">
+					<radio value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+        </label>
+			</radio-group>
+		</view>
+		<view>
+			<text>专业技能：</text>
+			<checkbox-group name="skills">
+				<label wx:for="{{skills}}" wx:key="value">
+					<checkbox value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+        </label>
+			</checkbox-group>
+		</view>
+		<view>
+			<text>您的意见：</text>
+			<textarea name="opinion" value="{{opinion}}" />
+			</view>
     <button form-type="submit">提交</button>
   </form>
 </view>
