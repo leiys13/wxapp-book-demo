@@ -1,0 +1,13 @@
+/* pages/index/index.wxss */
+@import "test.wxss";
+view {
+  margin: 50rpx;
+}
+input {
+  width: 650rpx;
+  margin-top: 20rpx;
+  border-bottom: 2rpx solid #ccc;
+}
+button {
+  margin: 50rpx;
+}
