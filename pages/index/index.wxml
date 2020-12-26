@@ -1,2 +1,43 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<!-- 右上角播放器 -->
+<view class="player player-{{ isPlayingMusic ? 'play' : 'pause' }}" bindtap="tapPlay">
+  <image src="/images/dp.png"></image>
+  <image src="/images/yd.png"></image>
+</view>
+
+<!-- 背景图片 -->
+<image class="bg" src="/images/bg.jpeg"></image>
+
+<!-- 内容区域 -->
+<view class="content">
+  <!-- 顶部gif图片 -->
+  <image class="content-gif" src="/images/love.gif"></image>
+  <!-- 标题 -->
+  <view class="content-title">邀请函</view>
+  <!-- 合照 -->
+  <view class="content-avatar">
+    <image src="/images/head.png"></image>
+  </view>
+  <!-- 名字 -->
+  <view class="content-info">
+    <view class="content-name" bindtap="tapCallGroom">
+      <image src="/images/tel.png"></image>
+      <view>雷元生</view>
+      <view>新郎</view>
+    </view>
+    <view class="content-wedding">
+      <image src="/images/wedding.png"></image>
+    </view>
+    <view class="content-name" bindtap="tapCallBride">
+      <image src="/images/tel.png"></image>
+      <view>黄超凤</view>
+      <view>新娘</view>
+    </view>
+  </view>
+  <!-- 婚礼信息 -->
+  <view class="content-address">
+    <view>我们诚邀您来参加我们的婚礼</view>
+    <view>时间：202X年5月20日</view>
+    <view>地点：郴州市嘉禾县珑熙府大酒店</view>
+  </view>
+</view>
