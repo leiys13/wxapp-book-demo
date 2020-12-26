@@ -5,7 +5,15 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    imageUrls: [
+      'http://127.0.0.1/image/wedding-invitation/1.jpeg',
+      'http://127.0.0.1/image/wedding-invitation/2.jpeg',
+      'http://127.0.0.1/image/wedding-invitation/3.jpeg',
+      'http://127.0.0.1/image/wedding-invitation/4.jpeg',
+      'http://127.0.0.1/image/wedding-invitation/5.jpeg',
+      'http://127.0.0.1/image/wedding-invitation/6.jpeg',
+      'http://127.0.0.1/image/wedding-invitation/7.jpeg'
+    ]
   },
 
   /**
