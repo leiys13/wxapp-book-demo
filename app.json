@@ -3,7 +3,8 @@
     "pages/index/index"
   ],
   "window": {
-    "navigationBarTitleText": "示例",
+    "navigationBarTitleText": "纸飞机音乐",
     "navigationBarBackgroundColor": "#325"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
