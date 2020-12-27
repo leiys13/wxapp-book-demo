@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "美好时光",
+  "usingComponents": {
+    "txv-video": "plugin://tencentvideo/video"
+  }
 }

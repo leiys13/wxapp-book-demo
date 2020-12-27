@@ -96,7 +96,7 @@ Page({
    */
   tapCallGroom: function () {
     wx.makePhoneCall({
-      phoneNumber: '17820981652',
+      phoneNumber: '1782098XXXX',
     })
   },
 
@@ -105,7 +105,7 @@ Page({
    */
   tapCallBride: function () {
     wx.makePhoneCall({
-      phoneNumber: '18570478625',
+      phoneNumber: '1857047XXXX',
     })
   }
 })
