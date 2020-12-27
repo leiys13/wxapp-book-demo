@@ -5,7 +5,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    latitude: 25.611751,
+    longitude: 112.380073,
+    markers: [{
+      id: 0,
+      iconPath: '/images/pt.png',
+      latitude: 25.611751,
+      longitude: 112.380073,
+      width: 30,
+      height: 30
+    }]
   },
 
   /**
@@ -62,5 +71,26 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  tapMyLocation: function () {
+    wx.getLocation({
+      type: 'gcj02',
+      success: function (res) {
+        wx.openLocation({
+          latitude: res.latitude,
+          longitude: res.longitude
+        })
+      }
+    })
+  },
+
+  markertap: function () {
+    wx.openLocation({
+      latitude: this.data.latitude,
+      longitude: this.data.longitude,
+      name: '中港世纪嘉城酒店',
+      address: '郴州市嘉禾县和谐路'
+    })
   }
 })

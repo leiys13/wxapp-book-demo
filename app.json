@@ -22,6 +22,11 @@
       "provider": "wxa75efa648b60994b"
     }
   },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "演示您的位置"
+    }
+  },
   "tabBar": {
     "color": "#201314",
     "selectedColor": "#ff4c91",
