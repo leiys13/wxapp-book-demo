@@ -1,18 +1,23 @@
-// pages/index/index.js
+// pages/modify/modify.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    username: '',
+    gender: ''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    console.log(decodeURIComponent(options.username), decodeURIComponent(options.gender))
+    this.setData({
+      username: decodeURIComponent(options.username),
+      gender: decodeURIComponent(options.gender)
+    })
   },
 
   /**
@@ -64,12 +69,14 @@ Page({
 
   },
 
-  tapChangeImage: function (e) {
-    wx.switchTab({
-      url: '/pages/person/person'
+  submitForm: function (e) {
+    var formData = e.detail.value
+    var pages = getCurrentPages()
+    var prevPage = pages[pages.length - 2]
+    prevPage.setData({
+      username: formData.username,
+      gender: formData.gender
     })
-    // wx.reLaunch({
-    //   url: '/pages/person/person',
-    // })
+    wx.navigateBack()
   }
 })

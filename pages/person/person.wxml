@@ -1,0 +1,13 @@
+<!--pages/person/person.wxml-->
+<view class="container">
+  <view class="head">
+    <image src="/images/wx_head_cf.png"></image>
+  </view>
+  <view class="empty"></view>
+  <view class="tab">
+    <view bindtap="tapToInfo"><text>个人资料</text><image src="/images/arrow-right.png"></image></view>
+    <view bindtap="tapToOrder"><text>订单物流查询</text><image src="/images/arrow-right.png"></image></view>
+    <view bindtap="tapToAddress"><text>选择收获地址</text><image src="/images/arrow-right.png"></image></view>
+    <view bindtap="tapCall"><text>客服联系方式</text><image src="/images/arrow-right.png"></image></view>
+  </view>
+</view>

@@ -1,2 +1,12 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="container">
+  <view class="welcome">欢迎来到我的个人页</view>
+  <image src="/images/wx_head_cf.png" bindtap="tapChangeImage"></image>
+  <view class="info">
+    <text>昵称：H2O</text>
+    <text>星座：水瓶座</text>
+    <text>兴趣：骑行、旅游</text>
+    <text>微信：leiys13</text>
+    <text>电话：13487513156</text>
+  </view>
+</view>

@@ -1,4 +1,4 @@
-// pages/index/index.js
+// pages/person/person.js
 Page({
 
   /**
@@ -64,12 +64,32 @@ Page({
 
   },
 
-  tapChangeImage: function (e) {
-    wx.switchTab({
-      url: '/pages/person/person'
+  tapToInfo: function () {
+    // 左上角可返回上一页按钮
+    wx.navigateTo({
+      url: '/pages/detail/detail'
     })
-    // wx.reLaunch({
-    //   url: '/pages/person/person',
+    // 左上角可返回主页按钮
+    // wx.redirectTo({
+    //   url: '/pages/detail/detail',
     // })
+  },
+
+  tapToOrder: function () {
+    wx.redirectTo({
+      url: '/pages/order/order',
+    })
+  },
+
+  tapToAddress: function () {
+    wx.redirectTo({
+      url: '/pages/address/address',
+    })
+  },
+
+  tapCall: function () {
+    wx.makePhoneCall({
+      phoneNumber: '400-321'
+    })
   }
 })

@@ -1,0 +1,17 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view bindtap="tapChangeAvatar">
+    <text class="label">头像</text>
+    <image src="{{avatarUrl}}"></image>
+    <image src="/images/arrow-right.png"></image>
+  </view>
+  <view>
+    <text class="label">昵称</text>
+    <text>{{username}}</text>
+  </view>
+  <view>
+    <text class="label">性别</text>
+    <text>{{gender}}</text>
+  </view>
+  <button bindtap="tapChangeInfo">修改资料</button>
+</view>

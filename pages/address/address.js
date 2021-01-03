@@ -1,11 +1,11 @@
-// pages/index/index.js
+// pages/address/address.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    addressInfo: null
   },
 
   /**
@@ -64,12 +64,17 @@ Page({
 
   },
 
-  tapChangeImage: function (e) {
-    wx.switchTab({
-      url: '/pages/person/person'
+  tapChooseAddress: function () {
+    wx.chooseAddress({
+      success: res => {
+        console.log('success:', res)
+        this.setData({
+          addressInfo: res
+        })
+      },
+      fail: res=> {
+        console.log('fail:', res)
+      }
     })
-    // wx.reLaunch({
-    //   url: '/pages/person/person',
-    // })
   }
 })

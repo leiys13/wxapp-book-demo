@@ -1,0 +1,30 @@
+/* pages/detail/detail.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+}
+.container > view {
+  display: flex;
+  margin: 0 20rpx;
+  border-bottom: 1rpx solid #ccc;
+  height: 100rpx;
+  line-height: 100rpx;
+  align-items: center;
+}
+.container > view > text:first-child {
+  flex: 1;
+}
+.container image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+.container image:last-child {
+  width: 40rpx;
+  height: 40rpx;
+}
+.container > button {
+  margin: 0 20rpx;
+  background: #325;
+  color: white;
+}

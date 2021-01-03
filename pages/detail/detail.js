@@ -1,11 +1,13 @@
-// pages/index/index.js
+// pages/detail/detail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    avatarUrl: '/images/wx_head_cf.png',
+    username: 'H2O',
+    gender: '女'
   },
 
   /**
@@ -64,12 +66,23 @@ Page({
 
   },
 
-  tapChangeImage: function (e) {
-    wx.switchTab({
-      url: '/pages/person/person'
+  tapChangeAvatar: function () {
+    wx.chooseImage({
+      count: 1,
+      sizeType: ['original', 'compressed'],
+      sourceType: ['album', 'camera'],
+      success: res => {
+        var tempFilePaths = res.tempFilePaths
+        this.setData({
+          avatarUrl: tempFilePaths
+        })
+      }
     })
-    // wx.reLaunch({
-    //   url: '/pages/person/person',
-    // })
+  },
+
+  tapChangeInfo: function () {
+    wx.navigateTo({
+      url: '/pages/modify/modify?username=' + encodeURIComponent(this.data.username) + '&gender=' + encodeURIComponent(this.data.gender)
+    })
   }
 })

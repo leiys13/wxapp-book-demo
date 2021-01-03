@@ -1,0 +1,25 @@
+/* pages/address/address.wxss */
+.container {
+  color: #666;
+}
+.add {
+  position: fixed;
+  bottom: 1rpx;
+  display: flex;
+  height: 100rpx;
+  align-items: center;
+  color: #ddd;
+  background: #325;
+  width: 100vw;
+}
+.add > image:first-child {
+  width: 40rpx;
+  height: 40rpx;
+  padding:0rpx 20rpx;
+}
+.add > image:last-child {
+  width: 30rpx;
+  height: 30rpx;
+  position: fixed;
+  right: 25rpx;
+}

@@ -1,11 +1,15 @@
-// pages/index/index.js
+// pages/order/order.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    no: null,
+    company: ['sf', 'sto', 'yt', 'yd', 'tt'],
+    com: ['顺丰', '申通', '圆通', '韵达', '天天'],
+    index: 0,
+    expressInfo: null
   },
 
   /**
@@ -64,12 +68,11 @@ Page({
 
   },
 
-  tapChangeImage: function (e) {
-    wx.switchTab({
-      url: '/pages/person/person'
-    })
-    // wx.reLaunch({
-    //   url: '/pages/person/person',
-    // })
+  changeCompany: function (e) {
+
+  },
+
+  tapSearch: function () {
+    var that = this
   }
 })

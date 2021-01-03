@@ -1,0 +1,35 @@
+<!--pages/address/address.wxml-->
+<view class=".container">
+  <form>
+    <view>
+      <view>收货人姓名</view>
+      <view>{{addressInfo.userName}}</view>
+    </view>
+    <view>
+      <view>邮编</view>
+      <view>{{addressInfo.postalCode}}</view>
+    </view>
+    <view>
+      <view>地区</view>
+      <view>{{addressInfo.provinceName}} {{addressInfo.cityName}} {{addressInfo.countyName}}</view>
+    </view>
+    <view>
+      <view>收获地址</view>
+      <view>{{addressInfo.detailInfo}}</view>
+    </view>
+    <view>
+      <view>国家码</view>
+      <view>{{addressInfo.nationalCode}}</view>
+    </view>
+    <view>
+      <view>手机号码</view>
+      <view>{{addressInfo.telNumber}}</view>
+    </view>
+  </form>
+</view>
+
+<view class="add" bindtap="tapChooseAddress">
+  <image class="left" src="/images/plus.png" mode="withFix"></image>
+  <view>获取收获地址</view>
+  <image class="right" src="/images/arrow-right.png" mode="withFix"></image>
+</view>
