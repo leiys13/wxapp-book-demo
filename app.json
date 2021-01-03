@@ -3,7 +3,12 @@
     "pages/index/index"
   ],
   "window": {
-    "navigationBarTitleText": "示例",
+    "navigationBarTitleText": "附近美食",
     "navigationBarBackgroundColor": "#225"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于查看附近的美食"
+    }
   }
 }

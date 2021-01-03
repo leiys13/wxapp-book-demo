@@ -1,2 +1,12 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<map id="map" 
+  bindcontroltap="tapControl"
+  bindregionchange="changeRegion"
+  longitude="{{longitude}}" 
+  latitude="{{latitude}}"
+  markers="{{markers}}"
+  controls="{{controls}}"
+  style="width:{{mapw}};height:{{maph}};"
+  scale="{{scale}}"
+  show-location >
+</map>
