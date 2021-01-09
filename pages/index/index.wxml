@@ -1,2 +1,16 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="anim-pic">
+  <image src="/images/zp.png" animation="{{animation}}" catchtouchstart="start" catchtouchend="end"></image>
+</view>
+<view class="anim-btn">
+  <button bindtap="tapRotate">旋转</button>
+  <button bindtap="tapScale">缩放</button>
+  <button bindtap="tapTranslate">移动</button>
+  <button bindtap="tapSkew">倾斜</button>
+  <button class="btn-two" bindtap="tapRotateAndScale">旋转并缩放</button>
+  <button class="btn-two" bindtap="tapRotateThenScale">旋转后缩放</button>
+  <button class="btn-two" bindtap="tapAll">同时展示全部</button>
+  <button class="btn-two" bindtap="tapAllOrderBy">按顺序展示全部</button>
+  <button class="btn-two" bindtap="tapReset1">回到原始状态</button>
+  <button class="btn-two" bindtap="tapReset2">顺序回到原态</button>
+</view>
