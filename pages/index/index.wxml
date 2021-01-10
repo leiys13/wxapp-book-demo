@@ -1,2 +1,27 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="wrap">
+  <scroll-view class="chat" scroll-y scroll-top="{{scrollTop}}" id="tab-con">
+    <view class="list">
+      <view class="chat-news" wx:for="{{newslist}}" wx:key="id">
+        <block wx:if="{{item.role == 'me'}}">
+          <view class="news-lf">
+            <text class="new-txt my">{{item.content}}</text>
+            <image src="/images/wx_head_cf.png"></image>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="news-rl">
+            <image class="new-img" src="/images/wx_head_cf.png"></image>
+            <text class="new-txt new-text">{{item.content}}</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+<view class="message">
+  <form class="sendMessage">
+    <input type="text" cursor-spacing="80" placeholder="请输入聊天内容..." value="{{message}}" bindinput="inputChange"></input>
+    <button type="primary" bindtap="tapSend" form-type="reset" size="small" button-hover="blue">发送</button>
+  </form>
+</view>
