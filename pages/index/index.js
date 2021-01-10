@@ -1,4 +1,14 @@
 // pages/index/index.js
+
+var tempFilePath = null
+var audioCtx = wx.createInnerAudioContext()
+var rec = wx.getRecorderManager()
+
+rec.onStop(res => {
+  tempFilePath = res.tempFilePath
+  console.log('temp file path:', tempFilePath)
+})
+
 Page({
 
   /**
@@ -62,5 +72,61 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  tapRecord: function () {
+    rec.start()
+  },
+
+  tapStop: function () {
+    rec.stop()
+  },
+
+  tapPlayback: function () {
+    audioCtx.src = tempFilePath
+    audioCtx.play()
+  },
+
+  tapUpload: function () {
+    if (!tempFilePath) {
+      wx.showToast({
+        title: '您还未录音',
+        icon: 'none',
+        duration: 2000
+      })
+      return
+    }
+    wx.uploadFile({
+      filePath: tempFilePath,
+      name: 'file',
+      url: 'http://127.0.0.1:3000/upload',
+      success: res => {
+        console.log('res.data', res.data)
+        audioCtx.src = res.data
+      }
+    })
+  },
+
+  tapPlay: function () {
+    audioCtx.play()
+  },
+
+  tapPause: function () {
+    audioCtx.pause()
+  },
+
+  tapDownload: function () {
+    wx.showLoading({
+      title: '下载中...',
+      mask: true
+    })
+    wx.downloadFile({
+      url: 'http://127.0.0.1/upload/d0a941b6f74014d3957dec46bd930796.aac',
+      success: res => {
+        audioCtx.src = res.tempFilePath
+        audioCtx.play()
+        wx.hideLoading()
+      }
+    })
   }
 })

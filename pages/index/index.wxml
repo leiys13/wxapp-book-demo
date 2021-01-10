@@ -1,2 +1,10 @@
 <!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+<view class="btn-rows">
+  <button class="btn" bindtap="tapRecord" size="mini">录音</button>
+  <button class="btn" bindtap="tapStop" size="mini">停止</button>
+  <button class="btn" bindtap="tapPlayback" size="mini">回放</button>
+  <button class="btn" bindtap="tapUpload" size="mini">上传</button>
+  <button class="btn" bindtap="tapPlay" size="mini">播放</button>
+  <button class="btn" bindtap="tapPause" size="mini">暂停</button>
+  <button class="btn" bindtap="tapDownload" size="mini">下载播放</button>
+</view>
