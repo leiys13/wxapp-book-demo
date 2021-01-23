@@ -10,5 +10,6 @@
     "scope.userLocation": {
       "desc": "你的位置信息将用于查看附近的美食"
     }
-  }
+  },
+  "sitemapLocation": "sitemap44.json"
 }
